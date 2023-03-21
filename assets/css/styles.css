@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(240, 228, 221);
+}
+
+
+.nav-color {
+    background-color: rgb(217, 188, 169);
+}
+
+.img-scale {
+    align-items: center;
+    width: 185px;
+    height: 125px;
+}
+
+.form-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+#map {
+    width: 400px;
+    height: 400px;
+}
+
+.push-image-left {
+    margin-left: 100px;
+}
+
+.push-image-right {
+    margin-right: 100px;
+}
+
+.seperation-bar hr{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.img-size {
+    min-height: 390px;
+    min-width: 390px;
+}
+
+footer h3{
+    background-color: rgb(217, 188, 169);
+    padding: 40px;
+}
