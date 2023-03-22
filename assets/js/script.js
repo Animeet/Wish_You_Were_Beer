@@ -5,12 +5,12 @@ var service;
 var infowindow;
 
 function initMap(zip) {
-    var sydney = new google.maps.LatLng(-33.867, 151.195);
+    var Hamilton = new google.maps.LatLng(40.2278, 74.6679);
 
     infowindow = new google.maps.InfoWindow();
     map = new google.maps.Map(document.getElementById("map"), {
-        center: sydney,
-        zoom: 15,
+        center: Hamilton,
+        zoom: 14,
     });
 
     var request = {
