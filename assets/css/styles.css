@@ -38,6 +38,7 @@ body {
 #map {
     width: 400px;
     height: 400px;
+    overflow: hidden;
 }
 
 .push-image-left {
@@ -65,7 +66,10 @@ body {
     border-top: 5px solid rgb(192, 146, 114);
 }
 
+footer {
+    background-color: rgb(217, 188, 169)
+}
+
 footer h4{
-    background-color: rgb(217, 188, 169);
     padding: 40px;
 }
