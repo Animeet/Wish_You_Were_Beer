@@ -1,5 +1,68 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
     background-color: rgb(240, 228, 221);
+}
+
+.bub-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.pelement {
+    position: relative;
+}
+
+.zindex {
+    z-index: 3;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span
+ {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 199, 109);
+    margin: 0 4px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 10px rgba(255, 199, 109, 0.2),
+    0 0 50px rgba(255, 199, 109, .40),
+    0 0 100px rgba(255, 199, 109, .60);
+    animation: animate 20s linear infinite;
+    animation-duration: calc(120s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 223, 167);
+    box-shadow: 0 0 0 10px rgba(255, 223, 167, 0.2),
+    0 0 50px rgb(255, 223, 167, .4),
+    0 0 100px rgb(255, 223, 167, .6);
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(.5)
+    }
+    100%{
+        transform: translateY(-75vh) scale(1.5);
+    }
 }
 
 .text-center {
