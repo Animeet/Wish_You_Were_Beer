@@ -8,13 +8,13 @@ function initMap(zip) {
     // var hamilton = new google.maps.LatLng(40.2278, -74.6679);
     var geocoder = new google.maps.Geocoder();
 
-    var createMarker = function(place) {
+    var createMarker = function (place) {
         if (!place.geometry || !place.geometry.location) return;
         var marker = new google.maps.Marker({
             map,
             position: place.geometry.location,
         });
-    
+
         google.maps.event.addListener(marker, "click", function () {
             console.log(place.name);
             infowindow.setContent(place.name || "");
@@ -26,7 +26,7 @@ function initMap(zip) {
     var showBarLocations = function (lat, lng) {
         infowindow = new google.maps.InfoWindow();
         map = new google.maps.Map(document.getElementById("map"), {
-            center: {lat: lat, lng: lng},
+            center: { lat: lat, lng: lng },
             zoom: 14,
         });
 

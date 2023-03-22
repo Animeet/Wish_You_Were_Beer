@@ -1,5 +1,4 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,8 +29,7 @@ body {
     display: flex;
 }
 
-.bubbles span
- {
+.bubbles span {
     position: relative;
     width: 30px;
     height: 30px;
@@ -40,8 +38,8 @@ body {
     border-radius: 50%;
     z-index: 1;
     box-shadow: 0 0 0 10px rgba(255, 199, 109, 0.2),
-    0 0 50px rgba(255, 199, 109, .40),
-    0 0 100px rgba(255, 199, 109, .60);
+        0 0 50px rgba(255, 199, 109, .40),
+        0 0 100px rgba(255, 199, 109, .60);
     animation: animate 20s linear infinite;
     animation-duration: calc(120s / var(--i));
 }
@@ -51,16 +49,16 @@ body {
     height: 60px;
     background: rgb(255, 223, 167);
     box-shadow: 0 0 0 10px rgba(255, 223, 167, 0.2),
-    0 0 50px rgb(255, 223, 167, .4),
-    0 0 100px rgb(255, 223, 167, .6);
+        0 0 50px rgb(255, 223, 167, .4),
+        0 0 100px rgb(255, 223, 167, .6);
 }
 
 @keyframes animate {
-    0%
-    {
-        transform: translateY(100vh) scale(.5)
+    0% {
+        transform: translateY(75vh) scale(.5)
     }
-    100%{
+
+    100% {
         transform: translateY(-75vh) scale(1.5);
     }
 }
@@ -112,7 +110,7 @@ body {
     margin-right: 100px;
 }
 
-.seperation-bar hr{
+.seperation-bar hr {
     border-top: 5px solid rgb(192, 146, 114);
     margin-top: 75px;
     margin-bottom: 75px;
@@ -133,6 +131,6 @@ footer {
     background-color: rgb(217, 188, 169)
 }
 
-footer h4{
+footer h4 {
     padding: 40px;
 }
