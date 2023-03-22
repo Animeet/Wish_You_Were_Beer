@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(240, 228, 221);
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.bor-bot {
+    border-bottom: 5px solid rgb(192, 146, 114);
+}
+
+.bor-rad {
+    border: 5px solid rgb(217, 188, 169);
+}
+
+.nav-color {
+    background-color: rgb(217, 188, 169);
+}
+
+.img-scale {
+    align-items: center;
+    width: 350px;
+    height: 150px;
+}
+
+.form-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.margins {
+    margin: 60px 5px 5px 5px;
+}
+
+#map {
+    width: 400px;
+    height: 400px;
+}
+
+.push-image-left {
+    margin-left: 100px;
+}
+
+.push-image-right {
+    margin-right: 100px;
+}
+
+.seperation-bar hr{
+    border-top: 5px solid rgb(192, 146, 114);
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.img-size {
+    min-height: 390px;
+    min-width: 390px;
+}
+
+.bor-top {
+    border-top: 5px solid rgb(192, 146, 114);
+}
+
+footer h4{
+    background-color: rgb(217, 188, 169);
+    padding: 40px;
+}
