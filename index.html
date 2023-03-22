@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Wish You Were Beer</title>
 </head>
-<body>
-    
 
+<body>
+    <header>
+        <nav class="is-flex is-justify-content-center nav-color bor-bot">
+            <p><img src="assets/images/grey-removebg-preview.png" class="img-scale" alt="BeerLogo"></p>
+        </nav>
+    </header>
+
+    <main>
+        <section class="is-flex is-justify-content-center is-align-items-center margins">
+            <div>
+                <h2 class="is-size-2 m-2">Brews Near You</h2>
+                <form class="form-box bor-rad">
+                    <label class="label">Zip Code</label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="Type Your Zip Code">
+                    </div>
+                    <button class="button is-info is-outlined is-rounded is-default mt-3">Get To Brewing</button>
+                </form>
+            </div>
+            <div class="box box-shadow push-image-left image is-750x750 bor-rad">
+                <div id="map"></div>
+            </div>
+        </section>
+
+        <div class="seperation-bar">
+            <hr>
+        </div>
+
+        <section class="is-flex is-justify-content-center is-align-items-center m-5">
+            <div class="box bor-rad push-image-right">
+                <img src="assets/images/aasunrise.jpg" class="img-size" alt="Picture of delicious tropical drink">
+            </div>
+            <div>
+                <h2 class="is-size-2 ml-4 mb-2">Pick Your Poison</h2>
+                <form class="form-box is-flex is-justify-content-center is-flex-direction-column bor-rad">
+                    <button class="button is-info is-outlined is-rounded is-large mt-1">Randomized Cocktail</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br>
+    <footer class="bor-top">
+        <h4 class="is-flex is-justify-content-center">
+            &copy; Wish You Were Beer 2023
+        </h4>
+    </footer>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiWKfpAZq9FUME7KMWsyEFw0z1vYloYkY&libraries=places&callback=Function.prototype"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
