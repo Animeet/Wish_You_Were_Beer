@@ -5,50 +5,64 @@ var service;
 var infowindow;
 
 function initMap(zip) {
-    var Hamilton = new google.maps.LatLng(40.2278, 74.6679);
+    // var hamilton = new google.maps.LatLng(40.2278, -74.6679);
+    var geocoder = new google.maps.Geocoder();
 
-    infowindow = new google.maps.InfoWindow();
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: Hamilton,
-        zoom: 14,
-    });
+    var createMarker = function(place) {
+        if (!place.geometry || !place.geometry.location) return;
+        var marker = new google.maps.Marker({
+            map,
+            position: place.geometry.location,
+        });
+    
+        google.maps.event.addListener(marker, "click", function () {
+            console.log(place.name);
+            infowindow.setContent(place.name || "");
+            infowindow.open(map, this);
+        });
+        marker.setMap(map);
+    }
 
-    var request = {
-        query: "Bars",
-        fields: ["name", "geometry"],
-    };
+    var showBarLocations = function (lat, lng) {
+        infowindow = new google.maps.InfoWindow();
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: {lat: lat, lng: lng},
+            zoom: 14,
+        });
 
-    service = new google.maps.places.PlacesService(map);
-    service.findPlaceFromQuery(request, (results, status) => {
-        if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-            for (let i = 0; i < results.length; i++) {
-                createMarker(results[i]);
+        var request = {
+            location: map.getCenter(),
+            radius: '3000',
+            type: ['bar']
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, (results, status) => {
+            if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                for (let i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                }
+
+                map.setCenter(results[0].geometry.location);
             }
+        });
+    }
 
-            map.setCenter(results[0].geometry.location);
+    var getCoordinates = function (results, status) {
+        if (status = 'OK') {
+            showBarLocations(results[0].geometry.location.lat(), results[0].geometry.location.lng());
         }
-    });
-}
-
-function createMarker(place) {
-    if (!place.geometry || !place.geometry.location) return;
-
-    var marker = new google.maps.Marker({
-        map,
-        position: place.geometry.location,
-    });
-
-    google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(place.name || "");
-        infowindow.open(map);
-    });
+    }
+    geocoder.geocode({ address: zip }, getCoordinates)
 }
 
 function search(eventObj) {
     eventObj.preventDefault();
     // var zipcode = document.querySelector('.input').value
-    var zip = $('.input').val();
+    var input = $('.input')
+    var zip = input.val();
     initMap(zip);
+    input.val('')
 }
 
 function init() {
