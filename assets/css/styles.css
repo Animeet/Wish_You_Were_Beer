@@ -139,7 +139,13 @@ footer h4 {
     padding: 40px;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 1500px) {
+    .span-hide1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580) {
     .brew-section, .cocktail-section {
         flex-direction: column;
     }
