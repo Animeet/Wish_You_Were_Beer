@@ -18,10 +18,10 @@
     </header>
 
     <main>
-        <section class="is-flex is-justify-content-center is-align-items-center margins pelement zindex">
+        <section class="brew-section is-flex is-justify-content-center is-align-items-center margins pelement zindex">
             <div>
                 <h2 class="is-size-2 m-2">Brews Near You</h2>
-                <form class="form-box bor-rad">
+                <form class="form-box bor-rad" id="mapApiBox">
                     <label class="label">Zip Code</label>
                     <div class="control">
                         <input class="input" type="text" pattern="[0-9]{5}" placeholder="Five digit zip code">
@@ -48,51 +48,51 @@
             <span style="--i:23"></span>
             <span style="--i:18"></span>
             <span style="--i:16"></span>
-            <span style="--i:19"></span>
-            <span style="--i:20"></span>
-            <span style="--i:22"></span>
-            <span style="--i:25"></span>
-            <span style="--i:18"></span>
-            <span style="--i:21"></span>
-            <span style="--i:15"></span>
-            <span style="--i:13"></span>
-            <span style="--i:26"></span>
-            <span style="--i:17"></span>
-            <span style="--i:13"></span>
-            <span style="--i:28"></span>
-            <span style="--i:11"></span>
-            <span style="--i:12"></span>
-            <span style="--i:24"></span>
-            <span style="--i:10"></span>
-            <span style="--i:14"></span>
-            <span style="--i:23"></span>
-            <span style="--i:18"></span>
-            <span style="--i:16"></span>
-            <span style="--i:19"></span>
-            <span style="--i:20"></span>
-            <span style="--i:22"></span>
-            <span style="--i:25"></span>
-            <span style="--i:18"></span>
-            <span style="--i:21"></span>
-            <span style="--i:15"></span>
-            <span style="--i:13"></span>
-            <span style="--i:26"></span>
-            <span style="--i:17"></span>
-            <span style="--i:28"></span>
-            <span style="--i:11"></span>
+            <span class="span-hide" style="--i:19"></span>
+            <span class="span-hide" style="--i:20"></span>
+            <span class="span-hide" style="--i:22"></span>
+            <span class="span-hide" style="--i:25"></span>
+            <span class="span-hide" style="--i:18"></span>
+            <span class="span-hide" style="--i:21"></span>
+            <span class="span-hide" style="--i:15"></span>
+            <span class="span-hide" style="--i:13"></span>
+            <span class="span-hide" style="--i:26"></span>
+            <span class="span-hide" style="--i:17"></span>
+            <span class="span-hide" style="--i:13"></span>
+            <span class="span-hide" style="--i:28"></span>
+            <span class="span-hide" style="--i:11"></span>
+            <span class="span-hide" style="--i:12"></span>
+            <span class="span-hide" style="--i:24"></span>
+            <span class="span-hide" style="--i:10"></span>
+            <span class="span-hide" style="--i:14"></span>
+            <span class="span-hide" style="--i:23"></span>
+            <span class="span-hide" style="--i:18"></span>
+            <span class="span-hide" style="--i:16"></span>
+            <span class="span-hide" style="--i:19"></span>
+            <span class="span-hide" style="--i:20"></span>
+            <span class="span-hide" style="--i:22"></span>
+            <span class="span-hide" style="--i:25"></span>
+            <span class="span-hide" style="--i:18"></span>
+            <span class="span-hide" style="--i:21"></span>
+            <span class="span-hide" style="--i:15"></span>
+            <span class="span-hide" style="--i:13"></span>
+            <span class="span-hide" style="--i:26"></span>
+            <span class="span-hide" style="--i:17"></span>
+            <span class="span-hide" style="--i:28"></span>
+            <span class="span-hide" style="--i:11"></span>
         </div>
         <div class="seperation-bar pelement zindex">
             <hr>
         </div>
 
-        <section class="is-flex is-justify-content-center is-align-items-center m-5 pelement zindex">
-            <div class="box bor-rad push-image-right">
-                <img src="assets/images/aasunrise.jpg" class="img-size" alt="Picture of delicious tropical drink">
+        <section class="cocktail-section is-flex is-justify-content-center is-align-items-center m-5 pelement zindex">
+            <div class="box bor-rad push-image-right is-flex is-flex-direction-column" id="drink-section">
+                <h3 class="is-size-3 aligntext has-text-weight-bold mb-5"></h3>
             </div>
             <div>
                 <h2 class="is-size-2 ml-4 mb-2">Pick Your Poison</h2>
                 <form class="form-box is-flex is-justify-content-center is-flex-direction-column bor-rad">
-                    <button class="button is-info is-outlined is-rounded is-large mt-1">Randomized Cocktail</button>
+                    <button class="button is-info is-outlined is-rounded is-large mt-1" id="cocktail-button">Randomized Cocktail</button>
                 </form>
             </div>
         </section>
@@ -105,6 +105,7 @@
     </footer>
 
 
+    <script src="assets/js/cocktails.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiWKfpAZq9FUME7KMWsyEFw0z1vYloYkY&libraries=places&callback=Function.prototype"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -113,8 +114,3 @@
 </body>
 
 </html>
-
-<!-- 
-Tomorrow's Goal:
-FINISH SECOND API & EVERYTHING ELSE
- -->

@@ -1,11 +1,8 @@
-var brewBaseUrl = 'https://api.openbrewerydb.org/breweries'
-var brewZip = ''
 var map;
 var service;
 var infowindow;
 
 function initMap(zip) {
-    // var hamilton = new google.maps.LatLng(40.2278, -74.6679);
     var geocoder = new google.maps.Geocoder();
 
     var createMarker = function (place) {
@@ -58,7 +55,6 @@ function initMap(zip) {
 
 function search(eventObj) {
     eventObj.preventDefault();
-    // var zipcode = document.querySelector('.input').value
     var input = $('.input')
     var zip = input.val();
     initMap(zip);
@@ -66,11 +62,8 @@ function search(eventObj) {
 }
 
 function init() {
-
-    // window.initMap = initMap;
-
-    document.querySelector('.form-box')
-    $('.form-box').submit(search);
+    document.querySelector('#mapApiBox')
+    $('#mapApiBox').submit(search);
 }
 
 init();
